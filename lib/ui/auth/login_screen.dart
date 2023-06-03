@@ -1,5 +1,7 @@
+import 'package:authentication_app/ui/auth/decide_screen.dart';
 import 'package:authentication_app/ui/auth/signup_screen.dart';
-import 'package:authentication_app/ui/firestore/firestore_list_screen.dart';
+
+import 'package:authentication_app/ui/forgot_password.dart';
 
 import 'package:authentication_app/utils/utils.dart';
 import 'package:authentication_app/widgets/round_button.dart';
@@ -44,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Utils().toastMessage(value.user!.email.toString());
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const FireStoreScreen()),
+        MaterialPageRoute(builder: (context) => const DecideScreen()),
       );
     }).onError((error, stackTrace) {
       debugPrint(error.toString());
@@ -125,6 +127,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     login();
                   }
                 },
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ForgotPasswordScreen()));
+                    },
+                    child: const Text('Forgot Password')),
               ),
               const SizedBox(
                 height: 30,

@@ -1,3 +1,4 @@
+import 'package:authentication_app/ui/auth/decide_screen.dart';
 import 'package:authentication_app/ui/auth/login_screen.dart';
 import 'package:authentication_app/utils/utils.dart';
 import 'package:authentication_app/widgets/round_button.dart';
@@ -110,6 +111,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onTap: () {
                 if (_formKey.currentState!.validate()) {
                   signUp();
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DecideScreen()));
                 }
               },
             ),

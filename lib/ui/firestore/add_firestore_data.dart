@@ -21,7 +21,7 @@ class _AddFirestoreDataScreenState extends State<AddFirestoreDataScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Firestore data'),
+        title: const Text('Add Post'),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:authentication_app/utils/utils.dart';
 import 'package:authentication_app/widgets/round_button.dart';
 import 'package:firebase_database/firebase_database.dart';

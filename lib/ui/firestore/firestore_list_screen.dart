@@ -24,7 +24,7 @@ class _FireStoreScreenState extends State<FireStoreScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: const Text('Firestore'),
+        title: const Text('Posts'),
       ),
       body: Column(children: [
         StreamBuilder<QuerySnapshot>(
